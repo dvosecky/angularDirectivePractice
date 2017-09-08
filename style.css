@@ -1,0 +1,29 @@
+goal-bar {
+	display: inline-block;
+	width: 200px;
+}
+
+.bar-background {
+	background: #c9eebd;
+	height: 10px;
+}
+
+.bar {
+	background: #73d25f;
+	height: 100%;
+}
+
+.current-value {
+}
+
+.total-value {
+	float: right;
+}
+
+.current-title {
+	
+}
+
+.total-title {
+	float: right;
+}
