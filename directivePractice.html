@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
   <title>Directives</title>
 </head>
 <body ng-app="myDirectives">
@@ -9,6 +10,7 @@
   <input type="text" ng-model="name" placeholder="enter your name">
   <div my-input-and-display></div>
   <div my-whack-a-mole>click me</div>
+	<goal-bar total="10" current="8" totaltitle="Goal" currenttitle="Current"></goal-bar>
   <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
   <script src="directivePractice.js"></script>
 </body>
