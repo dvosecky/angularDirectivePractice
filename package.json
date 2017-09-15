@@ -1,0 +1,10 @@
+{
+  "name": "directivePractice",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  },
+	"scripts": {
+		"start": "webpack --config webpack.config.js"
+	}
+}
