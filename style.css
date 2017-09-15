@@ -1,29 +1,30 @@
+* {
+	box-sizing: border-box;
+}
+
 goal-bar {
-	display: inline-block;
+	background: #f0f0f0;
+	display: block;
+	margin-top: 10px;
+	padding: 5px;
 	width: 200px;
 }
 
-.bar-background {
+goal-bar .bar-background {
 	background: #c9eebd;
 	height: 10px;
 }
 
-.bar {
+goal-bar .bar {
 	background: #73d25f;
 	height: 100%;
 }
 
-.current-value {
+goal-bar .row {
+	display: flex;
+	justify-content: space-between;
 }
 
-.total-value {
-	float: right;
-}
-
-.current-title {
-	
-}
-
-.total-title {
-	float: right;
+goal-bar h4, goal-bar h5 {
+	margin: 0;
 }

@@ -2,18 +2,23 @@ var goalBarHtml = `
 	<div class="bar-background">
 		<div class="bar" style="width: calc(100% * {{current}}/{{total}})"></div>
 	</div>
-	<div>
-		<span class="current-value">{{current}}</span>
-		<span class="total-value">{{total}}</span>
+	<div class="row">
+		<h4>{{current}}</h4>
+		<h4>{{total}}</h4>
 	</div>
-	<div>
-		<span class="current-title">{{currenttitle}}</span>
-		<span class="total-title">{{totaltitle}}</span>
+	<div class="row">
+		<h5>{{currenttitle}}</h5>
+		<h5>{{totaltitle}}</h5>
 	</div>
 `;
 
 (function(angular) {
 angular.module('myDirectives', [])
+	.controller('Controller', ['$scope', function($scope) {
+		$scope.current = 42;
+		$scope.total = 100;
+	}])
+
   .directive('myHelloWorld', function() {
     return {
       template: 'hello, world'
@@ -38,7 +43,7 @@ angular.module('myDirectives', [])
       }
     };
   }])
-
+	
 	.directive('goalBar', function() {
 		return {
 			scope: {
@@ -47,7 +52,7 @@ angular.module('myDirectives', [])
 				currenttitle: '@',
 				totaltitle: '@'
 			},
-			template: goalBarHtml
+			template: goalBarHtml,
 		}
 	})
 })(window.angular);

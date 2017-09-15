@@ -6,11 +6,18 @@
   <title>Directives</title>
 </head>
 <body ng-app="myDirectives">
-  <div my-hello-world></div>
-  <input type="text" ng-model="name" placeholder="enter your name">
-  <div my-input-and-display></div>
-  <div my-whack-a-mole>click me</div>
-	<goal-bar total="10" current="8" totaltitle="Goal" currenttitle="Current"></goal-bar>
+	<div ng-controller="Controller">
+		<div my-hello-world></div>
+		<input type="text" ng-model="name" placeholder="enter your name">
+		<div my-input-and-display></div>
+		<div my-whack-a-mole>click me</div>
+		<label>Current:</label>
+		<input type="number" ng-model="current">
+		<label>Total:</label>
+		<input type="number" ng-model="total">
+		<goal-bar total="{{total}}" current="{{current}}" totaltitle="Goal" currenttitle="Current"></goal-bar>
+	</div>
+	
   <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
   <script src="directivePractice.js"></script>
 </body>
