@@ -131,6 +131,7 @@ module.exports = function() {
 		template: goalBarHtml,
 	}
 };
+hey;
 
 
 /***/ })
