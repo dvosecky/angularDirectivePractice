@@ -21,5 +21,22 @@ module.exports = function() {
 			totaltitle: '@'
 		},
 		template: goalBarHtml,
+		link: function(scope, element, attrs) {
+			scope.$watch('current', checkValues);
+			scope.$watch('total', checkValues);
+			function checkValues() {
+				scope.current = attrs.current;
+				scope.total = attrs.total;
+				if (parseInt(scope.current) > parseInt(scope.total)) {
+					scope.current = scope.total;
+				}
+				if (parseInt(scope.current) < 0) {
+					scope.current = 0;
+				}
+				if (parseInt(scope.total) < 0) {
+					scope.total = 0;
+				}
+			}
+		}
 	}
 };

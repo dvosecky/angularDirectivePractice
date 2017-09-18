@@ -1,7 +1,7 @@
 (function(angular) {
 angular.module('myDirectives', [])
 	.controller('Controller', ['$scope', function($scope) {
-		$scope.current = 42;
+		$scope.current = 92;
 		$scope.total = 100;
 	}])
 	.directive('goalBar', require('./goalBar/goalBar.js'))
